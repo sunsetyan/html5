@@ -1,0 +1,39 @@
+/** <-- !应用于支持指定特性(彩色)的特殊媒体类型('screen')-->
+<link rel="stylesheet" media="screen and (color)" href="example.css" />
+<!--写在CSS的@import-rule语句中 -->
+@import url(color.css) screen and (color);
+媒体查询有一种适用所有媒体类型的简写语法,其中关键词all可以省略(后面的and也可以
+省略)
+。例如,下面两条语句是相同的:
+@media (orientation: portrait) { ... }
+@media all and (orientation: portrait) { ... }
+设计者和开发者可以使用这种方法创建出满足特殊需求的复杂查询:
+@media all and (max-width: 698px) and (min-width: 520px), (min-width: 1150px) {
+	body {
+		background: #ccc;
+	}
+}
+媒体特性有很多,其中包括:
+width和device-width;
+height和device-height;
+orientation;
+aspect-ratio和device-aspect-ratio;
+color和color-index;
+monochrome(如果不是monochrome设备,则等于0);
+resolution;
+scan(指tv输出设备的扫描过程);
+*/
+#warning {
+	animation-name: 'horizontal-slide';
+	animation-duration: 5s;
+	animation-iteration-count: 10;
+}
+
+@keyframes 'horizontal-slide ' {
+	from { 
+		left:0;	
+	}
+	to {
+		left: 100px;
+	}
+}

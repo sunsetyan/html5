@@ -1,0 +1,17 @@
+@CHARSET "UTF-8";
+/** 创建了文本替换(Text Replacement)设计模式。
+文本替换是在一些文本的位置上显示一张图片(将文本嵌入到图片中,实现更多的格式控制)
+。
+此外,将文本置于图片之下,当图片下载失败时,文本便显示出来。
+通过组合使用背景和绝对定位设计模式,就可以创建出文本替换模式。在一个标题中加入一
+个空白span。然后将标题设置为相对定位,这样子元素就能够相对于标题位置进行绝对定位。给
+span设置一个背景图像,并将它绝对定位到标题元素的文本之上。同时,将span和标题设置为与
+背景图像完全相同的尺寸。
+ */
+
+#h2 {position:relative; width:250px; height:760px, overflow:hidden;}
+
+#h2 span {
+	position:absolute; width:250px; height:76px;left:0; top:0;
+	background: url("heading2.jpg") no-repeat;
+}

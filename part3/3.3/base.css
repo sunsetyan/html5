@@ -1,0 +1,43 @@
+@CHARSET "UTF-8";
+
+/** 选择器分组 */
+p,ol,li {
+	border: 1px solid black;
+	padding-left: 10px;
+	font-family: monospace;
+	margin: 10px;
+	margin-left: 0px;
+}
+
+ol {
+	margin-left: 0px;
+	padding-left: 40px;
+	margin-top: 20px;
+}
+
+/** 位置选择器*/
+div *.my-class {
+	font-size: 1.2em;
+	font-weight: bold;
+} /** 后代元素选择*/
+#my-id p {
+	background-color: gold;
+} /** 后代元素选择*/
+#my-id>* {
+	border: 3px solid black;
+} /** 孩子元素选择*/
+
+:root {background:white;} /** 根选择器*/
+li:nth-child(2n+1) /** N级子元素*/
+li:nth-last-child(-n+2) /** 倒数第N级子元素*/
+li:nth-of-type(2n+1) {float:right; } /** 第n级类型选择器*/
+
+li:nth-last-of-type(2n+1) {float:right;}/** 倒数第N级类型选择器*/
+li:first-child{font-weight:bold; color:red;} /** 第一个元素*/
+li:last-child {font-weight:bold; color:red;}
+ul li:first-of-type{color:red} /** 第一个特定元素*/
+tr > td: last-of-type /** 最后一个特定类型*/
+li:only-child /** 唯一子元素 */
+div:only-of-type /** 唯一类型*/
+p:empty {display: hidden}/** 空元素*/
+li + li {font-style:italic;color:blue;}/** 相邻元素 */

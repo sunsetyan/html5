@@ -1,0 +1,19 @@
+@CHARSET "UTF-8";
+/** 左旁注(Left Marginal)
+	这个模式将一个或多个元素移到块级元素
+的左边,这样标题(或注释、图片等)就显示在左边,而内容则显示在右边。
+ */
+
+/** 这里的* 作为通配符，所有使用了left-marginal 的样式集合都会生效 */
+*.left-marginal {
+	position: relative;
+	margin-left: 200px;
+}
+
+/** 写个脚本将下述优化成margin:0,0,0,0 */
+*.marginal-heading {
+	position: absolute;
+	left: -200px;
+	top: 0;
+	margin: 0;
+}

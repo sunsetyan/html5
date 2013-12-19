@@ -1,0 +1,38 @@
+@CHARSET "UTF-8";
+/** 使用indent类将段落设置为相对定位,使之成为下沉内容的最近
+定位祖先元素,并且给段落增加120像素的左外边距,给下沉内容预留足够的空间。使用
+graphic-dropcap类将下沉内容设置为绝对定位,
+将它移到段落左边,
+并将它设置为与下沉图片相
+同的尺寸。然后,将下沉图片内的span设置为绝对定位,将它移到下沉文本之上,用它的背景图
+片覆盖文本。
+单从它本身来看,
+旁注式图片下沉模式本身比较复杂,
+它组合使用了16余种设计模式。
+另外,
+如果将它分解成文本替换和左旁注设计模式,那么这个模式就显得很简单。这正是设计模式的强
+大之处。
+
+ */
+*.indent {
+	position: relative;
+	margin-left: 120px;
+}
+
+*.graphic-dropcap {
+	position: absolute;
+	width: 120px;
+	height: 90px;
+	left: -120px;
+	top: 0;
+}
+
+*.graphic-dropcap span {
+	position: absolute;
+	width: 120px;
+	height: 90px;
+	margin: 0;
+	left: 0;
+	top: 0;
+	background: url("heading2.jpg") no-repeat;
+}

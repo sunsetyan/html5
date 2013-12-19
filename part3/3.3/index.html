@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" type="text/css" href="base.css">
+<title>1_4</title>
+<base target="_blank">
+</head>
+
+<body>
+
+	<h1>Type,Class,and ID selectors</h1>
+	<p>The type selector, <code>p</code>, adds a border to all paragraphs.</p>
+	
+	<p class="my-class1">The class selector, <code>*.my-class1</code>, adds padding</p>
+	<p class="my-class1 my-class2">The class selector, <code>*.my-class2</code>, adds letter-spacing.</p>
+	<p class="my-class1 my-class2" id="my-id">The ID selector, <code>#my-id</code>, adds a background color.</p>
+	
+	<h1>Position and Group Selectors</h1>
+	<p class="my-class">p.myclass</p>
+	<div id="my-id">
+		<ol>
+			<li>div ol li</li>
+			<li>div ol li</li>
+			<li>
+				<p class="my-class">div ol li p.myclass</p>
+			</li>
+		</ol>
+	</div>
+
+</body>
+</html>
