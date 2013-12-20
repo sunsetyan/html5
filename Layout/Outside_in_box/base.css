@@ -1,0 +1,11 @@
+@CHARSET "UTF-8";
+
+.before {width:30%; margin: 5px; padding: 5px; border: 5px solid black;}
+
+.after {width: 30%;}
+
+.after .oi {margin:5px; padding: 5px; border: 5px solid black; display: block;}
+
+.float {float:left;}
+.absolute { position: absolute; }
+.static {postion: static;}

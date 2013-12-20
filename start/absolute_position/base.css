@@ -1,0 +1,13 @@
+@CHARSET "UTF-8";
+/** 绝对定位*/
+/** CSS提供了position:absolute规则。当position: absolute与top和left属性组合使用时,元素就可以相对于最近定位祖先元素的左上角进行定位 */
+
+*.positioned {
+	position: relative;
+}
+
+*.absolute {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}

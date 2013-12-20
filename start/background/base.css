@@ -1,0 +1,8 @@
+@CHARSET "UTF-8";
+
+div {
+	/** background是一种CSS内置设计模式,支持在元素之下显示图片 , 这里相当于给所有div都指定了背景*/
+	background: url("../../heading2.jpg") no-repeat;
+	width: 250px;
+	height: 76px;
+}

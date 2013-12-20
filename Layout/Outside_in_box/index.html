@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" type="text/css" href="base.css">
+<title>1_4</title>
+<base target="_blank">
+</head>
+
+<body>
+
+	<h1>Outside_in_box</h1>
+
+	<h2>Before</h2>
+	<div class="container"><div class="before float">Float</div></div>
+	<div class="container"><div class="before absolute">absolute</div></div>
+	<div class="container"><div class="before static">static</div></div>
+	
+	<div class="float-divider"></div><h2>After</h2>
+
+	<div class="container">
+		<div class="after float">
+			<div class="oi">Float</div>
+		</div>
+	</div>
+	
+	<div class="container">
+		<span class="after absolute">
+			<span class="oi">absolute</span>
+		</span>
+	</div>
+	
+	<div class="container">
+		<div class="after static">
+			<div class="oi">static</div>
+		</div>
+	</div>
+
+</body>
+</html>
