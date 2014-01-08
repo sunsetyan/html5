@@ -1,0 +1,142 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0077)http://kelvinluck.com/assets/jquery/datePicker/v2/demo/datePickerOnFocus.html -->
+<HTML><HEAD><TITLE>jQuery datePicker simple datePicker demo</TITLE>
+<META http-equiv=Content-type content="text/html; charset=utf-8"><!-- firebug lite -->
+<SCRIPT src="45-jQuery datePicker.files/firebug.js" 
+type=text/javascript></SCRIPT>
+<!-- jQuery -->
+<SCRIPT src="45-jQuery datePicker.files/jquery-1.2.1.min.js" 
+type=text/javascript></SCRIPT>
+<!-- required plugins -->
+<SCRIPT src="45-jQuery datePicker.files/date.js" type=text/javascript></SCRIPT>
+<!--[if IE]>
+<SCRIPT src="45-jQuery datePicker.files/jquery.bgiframe.min.js" 
+type=text/javascript></SCRIPT>
+<![endif]--><!-- jquery.datePicker.js -->
+<SCRIPT src="45-jQuery datePicker.files/jquery.datePicker.js" 
+type=text/javascript></SCRIPT>
+<!-- datePicker required styles --><LINK media=screen 
+href="45-jQuery datePicker.files/datePicker.css" type=text/css rel=stylesheet><!-- page specific styles --><LINK media=screen 
+href="45-jQuery datePicker.files/demo.css" type=text/css rel=stylesheet><!-- page specific scripts -->
+<SCRIPT type=text/javascript charset=utf-8>
+            $(function()
+            {
+				$('.date-pick')
+					.datePicker()
+					.bind(
+						'focus',
+						function()
+						{
+							$(this).dpDisplay();
+						}
+					).bind(
+						'blur',
+						function(event)
+						{
+							// works good in Firefox... But how to get it to work in IE?
+							if ($.browser.mozilla) {
+
+								var el = event.explicitOriginalTarget
+								
+								var cal = $('#dp-popup')[0];
+							
+								while (true){
+									if (el == cal) {
+										return false;
+									} else if (el == document) {
+										$(this).dpClose();
+										return true;
+									} else {
+										el = $(el).parent()[0];
+									}
+								}
+							}
+						}
+					);
+            });
+		</SCRIPT>
+
+<SCRIPT src="45-jQuery datePicker.files/mint" type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.3268" name=GENERATOR></HEAD>
+<BODY>
+<DIV id=container>
+<H1>jquery.datePicker example: datePicker which appears on focus.</H1>
+<P><A 
+href="http://kelvinluck.com/assets/jquery/datePicker/v2/demo/index.html">&lt; 
+date picker home</A></P>
+<P>This example shows how to bind the focus and blur events on an element to the 
+dpDisplay and dpClose functions to make the date picker popup when the element 
+receives focus and disappear when the element is blurred. </P>
+<FORM id=chooseDateForm name=chooseDateForm action=#>
+<FIELDSET><LEGEND>Test date picker form</LEGEND>
+<OL>
+  <LI><LABEL for=date1>Date 1:</LABEL> <INPUT class=date-pick id=date1 
+  name=date1> 
+  <LI><LABEL for=date2>Date 2:</LABEL> <INPUT class=date-pick id=date2 
+  name=date2> 
+  <LI><LABEL for=test-select>Test select:</LABEL> <SELECT id=test-select 
+  style="WIDTH: 170px" name=test-select> <OPTION value=1 selected>Test 
+    SELECT</OPTION> <OPTION value=2>Doesn't shine through</OPTION> <OPTION 
+    value=3>Even in IE</OPTION> <OPTION value=4>Yay!</OPTION></SELECT> 
+</LI></OL></FIELDSET> </FORM>
+<H2>Page sourcecode</H2><PRE class=sourcecode>$(function()
+{
+	$('.date-pick')
+		.datePicker()
+		.bind(
+			'focus',
+			function()
+			{
+				$(this).dpDisplay();
+			}
+		).bind(
+			'blur',
+			function(event)
+			{
+				// works good in Firefox... But how to get it to work in IE?
+				if ($.browser.mozilla) {
+
+					var el = event.explicitOriginalTarget
+					
+					var cal = $('#dp-popup')[0];
+				
+					while (true){
+						if (el == cal) {
+							return false;
+						} else if (el == document) {
+							$(this).dpClose();
+							return true;
+						} else {
+							el = $(el).parent()[0];
+						}
+					}
+				}
+			}
+		);
+});</PRE>
+<H2>Page CSS</H2><PRE class=sourcecode>/* located in demo.css and creates a little calendar icon
+ * instead of a text link for "Choose date"
+ */
+a.dp-choose-date {
+	float: left;
+	width: 16px;
+	height: 16px;
+	padding: 0;
+	margin: 5px 3px 0;
+	display: block;
+	text-indent: -2000px;
+	overflow: hidden;
+	background: url(calendar.png) no-repeat; 
+}
+a.dp-choose-date.dp-disabled {
+	background-position: 0 -20px;
+	cursor: default;
+}
+/* makes the input field shorter once the date picker code
+ * has run (to allow space for the calendar icon
+ */
+input.dp-applied {
+	width: 140px;
+	float: left;
+}</PRE></DIV></BODY></HTML>

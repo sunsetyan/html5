@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0042)http://interface.eyecon.ro/demos/sort.html -->
+<HTML><HEAD><TITLE>Sortables demo - Interface plugin for jQuery</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<SCRIPT src="37 - Sortables demo 拖拽插件.files/jquery.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT src="37 - Sortables demo 拖拽插件.files/interface.js" 
+type=text/javascript></SCRIPT>
+
+<STYLE type=text/css media=all>HTML {
+	HEIGHT: 100%
+}
+IMG {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none
+}
+BODY {
+	FONT-SIZE: 11px; BACKGROUND: #fff; FONT-FAMILY: Arial, Helvetica, sans-serif; HEIGHT: 100%
+}
+.groupWrapper {
+	MIN-HEIGHT: 400px; FLOAT: left; WIDTH: 32%; MARGIN-RIGHT: 1%
+}
+.serializer {
+	CLEAR: both
+}
+.groupItem {
+	MARGIN-BOTTOM: 20px
+}
+.groupItem .itemHeader {
+	PADDING-RIGHT: 10px; BORDER-TOP: #b5ef59 2px solid; PADDING-LEFT: 10px; FONT-WEIGHT: bold; FONT-SIZE: 16px; PADDING-BOTTOM: 0px; CURSOR: move; COLOR: #000; LINE-HEIGHT: 28px; PADDING-TOP: 0px; POSITION: relative; HEIGHT: 28px; BACKGROUND-COLOR: #daff9f
+}
+.groupItem .itemHeader A {
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; RIGHT: 10px; POSITION: absolute; TOP: 0px; TEXT-DECORATION: none
+}
+.sortHelper {
+	BORDER-RIGHT: #666 3px dashed; BORDER-TOP: #666 3px dashed; BORDER-LEFT: #666 3px dashed; WIDTH: auto! important; BORDER-BOTTOM: #666 3px dashed
+}
+.groupWrapper P {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; OVERFLOW: hidden; PADDING-TOP: 0px; HEIGHT: 1px
+}
+</STYLE>
+
+<META content="MSHTML 6.00.2900.3268" name=GENERATOR></HEAD>
+<BODY>
+<DIV class=groupWrapper id=sort1>
+<DIV class=groupItem id=newsFeeder>
+<DIV class=itemHeader>Feeds<A class=closeEl 
+href="http://interface.eyecon.ro/demos/sort.html#">[-]</A></DIV>
+<DIV class=itemContent>
+<UL>
+  <LI>orem ipsum dolor sit amet, consectetuer adipiscing elit 
+  <LI>orem ipsum dolor sit amet, consectetuer adipiscing elit 
+  <LI>orem ipsum dolor sit amet, consectetuer adipiscing elit 
+  <LI>orem ipsum dolor sit amet, consectetuer adipiscing elit 
+</LI></UL></DIV></DIV>
+<DIV class=groupItem id=news>
+<DIV class=itemHeader>News<A class=closeEl 
+href="http://interface.eyecon.ro/demos/sort.html#">[-]</A></DIV>
+<DIV class=itemContent>
+<UL>
+  <LI>orem ipsum dolor sit amet, consectetuer adipiscing elit 
+  <LI>orem ipsum dolor sit amet, consectetuer adipiscing elit 
+  <LI>orem ipsum dolor sit amet, consectetuer adipiscing elit 
+  <LI>orem ipsum dolor sit amet, consectetuer adipiscing elit 
+</LI></UL></DIV></DIV>
+<P></P></DIV>
+<DIV class=groupWrapper id=sort2>
+<DIV class=groupItem id=shop>
+<DIV class=itemHeader>Shopping<A class=closeEl 
+href="http://interface.eyecon.ro/demos/sort.html#">[-]</A></DIV>
+<DIV class=itemContent>
+<UL>
+  <LI>orem ipsum dolor sit amet, consectetuer adipiscing elit 
+  <LI>orem ipsum dolor sit amet, consectetuer adipiscing elit 
+  <LI>orem ipsum dolor sit amet, consectetuer adipiscing elit 
+  <LI>orem ipsum dolor sit amet, consectetuer adipiscing elit 
+</LI></UL></DIV></DIV>
+<P></P></DIV>
+<DIV class=groupWrapper id=sort3>
+<DIV class=groupItem id=links>
+<DIV class=itemHeader>Links<A class=closeEl 
+href="http://interface.eyecon.ro/demos/sort.html#">[-]</A></DIV>
+<DIV class=itemContent>
+<UL>
+  <LI>orem ipsum dolor sit amet, consectetuer adipiscing elit 
+  <LI>orem ipsum dolor sit amet, consectetuer adipiscing elit 
+  <LI>orem ipsum dolor sit amet, consectetuer adipiscing elit 
+  <LI>orem ipsum dolor sit amet, consectetuer adipiscing elit 
+</LI></UL></DIV></DIV>
+<DIV class=groupItem id=images>
+<DIV class=itemHeader>Images<A class=closeEl 
+href="http://interface.eyecon.ro/demos/sort.html#">[-]</A></DIV>
+<DIV class=itemContent>
+<UL>
+  <LI>orem ipsum dolor sit amet, consectetuer adipiscing elit 
+  <LI>orem ipsum dolor sit amet, consectetuer adipiscing elit 
+  <LI>orem ipsum dolor sit amet, consectetuer adipiscing elit 
+  <LI>orem ipsum dolor sit amet, consectetuer adipiscing elit 
+</LI></UL></DIV></DIV>
+<P></P></DIV>
+<SCRIPT type=text/javascript>
+$(document).ready(
+	function () {
+		$('a.closeEl').bind('click', toggleContent);
+		$('div.groupWrapper').Sortable(
+			{
+				accept: 'groupItem',
+				helperclass: 'sortHelper',
+				activeclass : 	'sortableactive',
+				hoverclass : 	'sortablehover',
+				handle: 'div.itemHeader',
+				tolerance: 'pointer',
+				onChange : function(ser)
+				{
+				},
+				onStart : function()
+				{
+					$.iAutoscroller.start(this, document.getElementsByTagName('body'));
+				},
+				onStop : function()
+				{
+					$.iAutoscroller.stop();
+				}
+			}
+		);
+	}
+);
+var toggleContent = function(e)
+{
+	var targetContent = $('div.itemContent', this.parentNode.parentNode);
+	if (targetContent.css('display') == 'none') {
+		targetContent.slideDown(100);
+		$(this).html('[-]');
+	} else {
+		targetContent.slideUp(100);
+		$(this).html('[+]');
+	}
+	return false;
+};
+function serialize(s)
+{
+	serial = $.SortSerialize(s);
+	alert(serial.hash);
+};
+</SCRIPT>
+
+<DIV class=serializer><A onClick="serialize(); return false;" 
+href="http://interface.eyecon.ro/demos/sort.html#">serialize all lists</A> <A 
+onclick="serialize('sort1'); return false;" 
+href="http://interface.eyecon.ro/demos/sort.html#">serialize list 1</A> <A 
+onclick="serialize('sort2'); return false;" 
+href="http://interface.eyecon.ro/demos/sort.html#">serialize list 2</A> <A 
+onclick="serialize('sort3'); return false;" 
+href="http://interface.eyecon.ro/demos/sort.html#">serialize list 3</A> <A 
+onclick="serialize(['sort1', 'sort3']); return false;" 
+href="http://interface.eyecon.ro/demos/sort.html#">serialize lists 2 and 3</A> 
+</DIV>
+<SCRIPT language=JavaScript type=text/javascript>var client_id = 1;</SCRIPT>
+
+<SCRIPT language=JavaScript src="" type=text/javascript></SCRIPT>
+<NOSCRIPT>
+<P><IMG height=1 alt="" src="" width=1></P></NOSCRIPT></BODY></HTML>

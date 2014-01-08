@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0039)http://www.ericmmartin.com/simplemodal/ -->
+<HTML 
+xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>SimpleModal Demos</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<META content="Eric Martin" name=author>
+<META content="2008 - Eric Martin" name=copyright>
+<META 
+content="SimpleModal is a lightweight jQuery plugin that provides a simple interface to create a modal dialog." 
+name=description>
+<META content="simplemodal,jquery,plugin,modal dialog,css,javascript,dom" 
+name=keywords><!-- Import jQuery and SimpleModal source files -->
+<SCRIPT src="SimpleModal_Demos.files/jquery.js" type=text/javascript></SCRIPT>
+
+<SCRIPT src="SimpleModal_Demos.files/jquery.simplemodal.js" 
+type=text/javascript></SCRIPT>
+<!-- Demo specific stuff -->
+<SCRIPT src="SimpleModal_Demos.files/demo.js" type=text/javascript></SCRIPT>
+<LINK media=screen href="SimpleModal_Demos.files/demo.css" type=text/css 
+rel=stylesheet><!-- Basic Dialog -->
+<SCRIPT src="SimpleModal_Demos.files/basic.js" type=text/javascript></SCRIPT>
+<LINK media=screen href="SimpleModal_Demos.files/basic.css" type=text/css 
+rel=stylesheet><!-- IE 6 hacks --><!--[if lt IE 7]><LINK media=screen 
+href="SimpleModal_Demos.files/basic_ie.css" type=text/css rel=stylesheet><![endif]--><!-- Contact Form -->
+<SCRIPT src="SimpleModal_Demos.files/contact.js" type=text/javascript></SCRIPT>
+<LINK media=screen href="SimpleModal_Demos.files/contact.css" type=text/css 
+rel=stylesheet><!-- IE 6 hacks --><!--[if lt IE 7]><LINK media=screen 
+href="SimpleModal_Demos.files/contact_ie.css" type=text/css rel=stylesheet><![endif]--><!-- Confirm -->
+<SCRIPT src="SimpleModal_Demos.files/confirm.js" type=text/javascript></SCRIPT>
+<LINK media=screen href="SimpleModal_Demos.files/confirm.css" type=text/css 
+rel=stylesheet><!-- IE 6 hacks --><!--[if lt IE 7]><LINK media=screen 
+href="SimpleModal_Demos.files/confirm_ie.css" type=text/css rel=stylesheet><![endif]-->
+<META content="MSHTML 6.00.2900.3268" name=GENERATOR></HEAD>
+<BODY>
+<DIV id=notice>&raquo; Back to <A 
+href="http://www.ericmmartin.com/projects/simplemodal">SimpleModal 
+Home</A></DIV>
+<DIV id=container>
+<DIV id=header>
+<H1>SimpleModal Demos</H1></DIV>
+<DIV id=content>
+<DIV id=basicModal>
+<H2>Basic Modal Dialog</H2>
+<P>A basic modal dialog with minimal styling and without any additional 
+settings. There are a few CSS attributes set internally by SimpleModal, however, 
+SimpleModal relies mostly on external CSS for the look and feel.</P>
+<FORM action=download/ method=post><INPUT class=demo type=button value=Demo name=basic><INPUT class=demo type=button value=Download name=download> 
+<INPUT type=hidden value=basic name=demo> </FORM></DIV>
+<DIV id=basicModalContent style="DISPLAY: none">
+<H1>Basic Modal Dialog</H1>
+<P>For this demo, SimpleModal is using this "hidden" data for its content. You 
+can also populate the modal dialog with standard HTML or with DOM 
+element(s).</P>
+<P>Examples:</P>
+<P><CODE>$('#basicModalContent').modal(); // jQuery object; this demo</CODE></P>
+<P><CODE>$.modal(document.getElementById('basicModalContent')); // 
+DOM</CODE></P>
+<P><CODE>$.modal('&lt;p&gt;&lt;b&gt;HTML&lt;/b&gt; elements&lt;/p&gt;'); // 
+HTML</CODE></P>
+<P><A href="http://www.ericmmartin.com/projects/simplemodal">More 
+details...</A></P></DIV><BR>
+<HR>
+
+<DIV id=contactForm>
+<H2>Contact Form</H2>
+<P>A contact form built on SimpleModal. Demonstrates the use of the 
+<CODE>onOpen</CODE>, <CODE>onShow</CODE> and <CODE>onClose</CODE> callbacks, as 
+well as the use of Ajax with SimpleModal.</P>
+<FORM action=download/ method=post><INPUT class=demo type=button value=Demo name=contact><INPUT class=demo type=button value=Download name=download> 
+<INPUT type=hidden value=contact name=demo> </FORM></DIV><BR>
+<HR>
+
+<DIV id=confirmDialog>
+<H2>Confirm Override</H2>
+<P>A modal dialog override of the JavaScript confirm function. Demonstrates the 
+use of <CODE>onShow</CODE> as well as how to display a modal dialog confirmation 
+instead of the default JavaScript confirm dialog.</P>
+<FORM action=download/ method=post><INPUT class=demo type=button value=Demo name=confirm><INPUT class=demo type=button value=Download name=download> 
+<INPUT type=hidden value=confirm name=demo> </FORM></DIV>
+<DIV id=confirm style="DISPLAY: none"><A class="modalCloseX modalClose" 
+title=Close href="http://www.ericmmartin.com/simplemodal/#">x</A> 
+<DIV class=header><SPAN>Confirm</SPAN></DIV>
+<P class=message></P>
+<DIV class=buttons>
+<DIV class="no modalClose">No</DIV>
+<DIV class=yes>Yes</DIV></DIV></DIV><BR></DIV></DIV>
+<DIV style="HEIGHT: 400px"></DIV>
+<SCRIPT type=text/javascript>
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</SCRIPT>
+
+<SCRIPT type=text/javascript>
+var pageTracker = _gat._getTracker("UA-2691485-4");
+pageTracker._initData();
+pageTracker._trackPageview();
+</SCRIPT>
+</BODY></HTML>

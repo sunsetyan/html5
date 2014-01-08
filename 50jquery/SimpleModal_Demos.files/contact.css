@@ -1,0 +1,84 @@
+BODY {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; WIDTH: 100%; PADDING-TOP: 0px; HEIGHT: 100%
+}
+#contact-overlay {
+	CURSOR: wait; BACKGROUND-COLOR: #000
+}
+#contact-container {
+	FONT-SIZE: 16px; LEFT: 50%; MARGIN-LEFT: -210px; WIDTH: 420px; FONT-FAMILY: 'Trebuchet MS', Verdana, Arial; TOP: 15%; TEXT-ALIGN: left
+}
+#contact-container .contact-content {
+	COLOR: #ddd; HEIGHT: 40px; BACKGROUND-COLOR: #333
+}
+#contact-container H1 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 12px; FONT-SIZE: 1.2em; PADDING-BOTTOM: 6px; MARGIN: 0px; COLOR: #d76300; PADDING-TOP: 0px; TEXT-ALIGN: left
+}
+#contact-container .contact-loading {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; Z-INDEX: 8000; BACKGROUND: url(../img/contact/loading.gif) no-repeat; PADDING-BOTTOM: 0px; MARGIN: -14px 0px 0px 170px; WIDTH: 54px; PADDING-TOP: 0px; POSITION: absolute; HEIGHT: 55px
+}
+#contact-container .contact-message {
+	TEXT-ALIGN: center
+}
+#contact-container .contact-error {
+	BORDER-RIGHT: #ccc 2px solid; PADDING-RIGHT: 2px; BORDER-TOP: #ccc 2px solid; PADDING-LEFT: 2px; FONT-WEIGHT: bold; FONT-SIZE: 0.8em; BACKGROUND: #000; PADDING-BOTTOM: 2px; MARGIN: 0px auto; BORDER-LEFT: #ccc 2px solid; WIDTH: 92%; PADDING-TOP: 2px; BORDER-BOTTOM: #ccc 2px solid
+}
+#contact-container BR {
+	CLEAR: both
+}
+#contact-container FORM {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+#contact-container LABEL {
+	CLEAR: left; PADDING-RIGHT: 4px; DISPLAY: block; FONT-WEIGHT: bold; FLOAT: left; WIDTH: 100px; TEXT-ALIGN: right
+}
+#contact-container .contact-input {
+	BORDER-RIGHT: #fff 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #fff 1px solid; PADDING-LEFT: 2px; BACKGROUND: #eee; FLOAT: left; PADDING-BOTTOM: 2px; MARGIN: 2px; BORDER-LEFT: #fff 1px solid; WIDTH: 250px; PADDING-TOP: 2px; BORDER-BOTTOM: #fff 1px solid; FONT-FAMILY: 'Trebuchet MS', Verdana, Arial
+}
+#contact-container TEXTAREA {
+	HEIGHT: 84px
+}
+#contact-container .contact-top {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: url(../img/contact/form_top.gif) no-repeat; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; HEIGHT: 13px
+}
+#contact-container .contact-bottom {
+	FONT-SIZE: 0.7em; BACKGROUND: url(../img/contact/form_bottom.gif) no-repeat; HEIGHT: 13px; TEXT-ALIGN: center
+}
+#contact-container .contact-bottom A {
+	COLOR: #666; POSITION: relative; TOP: -4px; TEXT-DECORATION: none
+}
+#contact-container .contact-bottom A:link {
+	COLOR: #666; POSITION: relative; TOP: -4px; TEXT-DECORATION: none
+}
+#contact-container .contact-bottom A:active {
+	COLOR: #666; POSITION: relative; TOP: -4px; TEXT-DECORATION: none
+}
+#contact-container .contact-bottom A:visited {
+	COLOR: #666; POSITION: relative; TOP: -4px; TEXT-DECORATION: none
+}
+#contact-container .contact-bottom A:hover {
+	COLOR: #888
+}
+#contact-container .contact-button {
+	BORDER-TOP-WIDTH: 0px; FONT-WEIGHT: bold; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 1em; BORDER-BOTTOM-WIDTH: 0px; MARGIN: 4px 0px 0px 4px; VERTICAL-ALIGN: middle; CURSOR: pointer; COLOR: #fff; HEIGHT: 24px; TEXT-ALIGN: center; BORDER-RIGHT-WIDTH: 0px
+}
+#contact-container .contact-send {
+	BACKGROUND: url(../img/contact/send.png) no-repeat; WIDTH: 50px
+}
+#contact-container .contact-cancel {
+	BACKGROUND: url(../img/contact/cancel.png) no-repeat; WIDTH: 65px
+}
+#contact-container A.modalCloseX {
+	FONT-WEIGHT: bold; FONT-SIZE: 1.2em; LEFT: 400px; COLOR: #999; POSITION: absolute; TOP: -2px; TEXT-DECORATION: none
+}
+#contact-container A.modalCloseX:link {
+	FONT-WEIGHT: bold; FONT-SIZE: 1.2em; LEFT: 400px; COLOR: #999; POSITION: absolute; TOP: -2px; TEXT-DECORATION: none
+}
+#contact-container A.modalCloseX:active {
+	FONT-WEIGHT: bold; FONT-SIZE: 1.2em; LEFT: 400px; COLOR: #999; POSITION: absolute; TOP: -2px; TEXT-DECORATION: none
+}
+#contact-container A.modalCloseX:visited {
+	FONT-WEIGHT: bold; FONT-SIZE: 1.2em; LEFT: 400px; COLOR: #999; POSITION: absolute; TOP: -2px; TEXT-DECORATION: none
+}
+#contact-container A.modalCloseX:hover {
+	COLOR: #9bb3b3
+}

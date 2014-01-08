@@ -1,0 +1,298 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0044)http://www.malsup.com/jquery/cycle/int2.html -->
+<HTML lang=en xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>JQuery Cycle Plugin - Intermediate Demos (Part 2)</TITLE>
+<META http-equiv=content-type content="text/html; charset=UTF-8">
+<META http-equiv=Content-Style-Type content=text/css><LINK media=screen 
+href="JQuery Cycle Plugin.files/jq.css" type=text/css rel=stylesheet><LINK 
+media=screen href="JQuery Cycle Plugin.files/cycle.css" type=text/css 
+rel=stylesheet>
+<STYLE type=text/css>#s6 {
+	BORDER-RIGHT: #ddd 1px solid; BORDER-TOP: #ddd 1px solid; BORDER-LEFT: #ddd 1px solid; WIDTH: 300px; BORDER-BOTTOM: #ddd 1px solid; HEIGHT: 230px; BACKGROUND-COLOR: #eee
+}
+#s6 DIV {
+	PADDING-RIGHT: 15px; PADDING-LEFT: 15px; FONT-SIZE: 16px; PADDING-BOTTOM: 15px; WIDTH: 270px; COLOR: #333; PADDING-TOP: 15px; HEIGHT: 200px; TEXT-ALIGN: left
+}
+#s6 DIV IMG {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; BACKGROUND: #fff; FLOAT: left; PADDING-BOTTOM: 3px; MARGIN: 0px 10px 10px 0px; WIDTH: 100px; PADDING-TOP: 3px; HEIGHT: 100px
+}
+#s7 {
+	BORDER-RIGHT: #ddd 1px solid; BORDER-TOP: #ddd 1px solid; BORDER-LEFT: #ddd 1px solid; WIDTH: 230px; BORDER-BOTTOM: #ddd 1px solid; HEIGHT: 230px; BACKGROUND-COLOR: #eee
+}
+#s7 DIV {
+	PADDING-RIGHT: 15px; PADDING-LEFT: 15px; FONT-SIZE: 16px; PADDING-BOTTOM: 15px; OVERFLOW: hidden; WIDTH: 200px; COLOR: #333; PADDING-TOP: 15px; HEIGHT: 200px; TEXT-ALIGN: left
+}
+#s6 DIV {
+	LEFT: 0px; TOP: 0px
+}
+#s7 DIV {
+	LEFT: 0px; TOP: 0px
+}
+#big {
+	WIDTH: 500px; TEXT-ALIGN: left
+}
+TD A {
+	MARGIN: 5px
+}
+.nav {
+	MARGIN: 5px 0px
+}
+#nav A {
+	BORDER-RIGHT: #ccc 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #ccc 1px solid; PADDING-LEFT: 5px; BACKGROUND: #fc0; PADDING-BOTTOM: 3px; MARGIN: 0px 5px; BORDER-LEFT: #ccc 1px solid; PADDING-TOP: 3px; BORDER-BOTTOM: #ccc 1px solid; TEXT-DECORATION: none
+}
+#s7 STRONG {
+	BORDER-RIGHT: #ccc 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #ccc 1px solid; PADDING-LEFT: 5px; BACKGROUND: #fc0; PADDING-BOTTOM: 3px; MARGIN: 0px 5px; BORDER-LEFT: #ccc 1px solid; PADDING-TOP: 3px; BORDER-BOTTOM: #ccc 1px solid; TEXT-DECORATION: none
+}
+#nav A.activeSlide {
+	BACKGROUND: #ea0
+}
+#nav A:unknown {
+	outline: none
+}
+#output {
+	TEXT-ALIGN: left
+}
+</STYLE>
+
+<SCRIPT src="JQuery Cycle Plugin.files/jquery-1.2.1.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT src="JQuery Cycle Plugin.files/chili-1.7.pack.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT src="JQuery Cycle Plugin.files/jquery.cycle.all.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT src="JQuery Cycle Plugin.files/jquery.easing.1.1.1.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT type=text/javascript>
+$.fn.cycle.defaults.timeout = 6000;
+$(function() {
+    // run the code in the markup!
+    $('table pre code').not('#skip,#skip2').each(function() {
+        eval($(this).text());
+    });
+    
+    $('#s4').before('<div id="nav" class="nav">').cycle({
+        fx:     'turnDown',
+        speed:  'fast',
+        timeout: 0,
+        pager:  '#nav'
+    });
+});
+
+function onBefore() {
+    $('#output').html("Scrolling image:<br>" + this.src);
+    //window.console.log(  $(this).parent().children().index(this) );
+}
+function onAfter() {
+    $('#output').html("Scroll complete for:<br>" + this.src)
+        .append('<h3>' + this.alt + '</h3>');
+}
+</SCRIPT>
+
+<META content="MSHTML 6.00.2900.3268" name=GENERATOR></HEAD>
+<BODY>
+<DIV><A id=logo title="Powered By jQuery" href="http://jquery.com/"></A></DIV>
+<H1 id=banner><A id=backnav href="http://www.malsup.com/jquery/cycle/">‹‹ cycle 
+home</A>jQuery Cycle Plugin - Intermediate Demos (Part 2)</H1>
+<H2 id=header><A 
+href="http://www.malsup.com/jquery/cycle/download.html">Download the Cycle 
+Plugin</A></H2>
+<DIV id=main>
+<DIV id=demos>
+<H1>Click Transitions - <EM>prev</EM> and <EM>next</EM></H1>
+<P>Rather than have transitions occur on a timer you can choose to have 
+transitions occur in response to a click event. The <CODE>prev</CODE> and 
+<CODE>next</CODE> options are used to identify the elements which should be the 
+triggers for prev/next transitions. When used in conjuction with <CODE>timeout = 
+0</CODE> the effect is a manual slideshow. The values for prev and next can be a 
+DOM element or any valid jQuery selection string. </P>
+<TABLE cellSpacing=20>
+  <TBODY>
+  <TR>
+    <TD>
+      <H1>Next</H1>
+      <DIV class=pics id=s1><IMG height=200 
+      src="JQuery Cycle Plugin.files/beach1.jpg" width=200> <IMG height=200 
+      src="JQuery Cycle Plugin.files/beach2.jpg" width=200> <IMG height=200 
+      src="JQuery Cycle Plugin.files/beach3.jpg" width=200> </DIV>
+      <DIV class=nav>(Click on image for next slide)</DIV><PRE><CODE class=mix>$('#s1').cycle({
+    fx:     'slideY',
+    speed:  300,
+    next:   '#s1',
+    timeout: 0
+});</CODE></PRE></TD>
+    <TD>
+      <H1>Prev/Next</H1>
+      <DIV class=pics id=s2><IMG height=200 
+      src="JQuery Cycle Plugin.files/beach1.jpg" width=200> <IMG height=200 
+      src="JQuery Cycle Plugin.files/beach2.jpg" width=200> <IMG height=200 
+      src="JQuery Cycle Plugin.files/beach3.jpg" width=200> </DIV>
+      <DIV class=nav><A id=prev2 
+      href="http://www.malsup.com/jquery/cycle/int2.html#">Prev</A> <A id=next2 
+      href="http://www.malsup.com/jquery/cycle/int2.html#">Next</A></DIV><PRE><CODE class=mix>$('#s2').cycle({
+    fx:     'fade',
+    speed:  'fast',
+    timeout: 0,
+    next:   '#next2',
+    prev:   '#prev2'
+});</CODE></PRE></TD></TR></TBODY></TABLE>
+<H1>More Click Transitions - <EM>timeout</EM> and <EM>pager</EM></H1>You can 
+combine an automatic slideshow (timeout-based) with manual controls by using a 
+non-zero timeout value. The next slideshow (below, left) is setup to perform 
+auto-transitions every 3 seconds, pause-on-hover, and perform a manual advance 
+when the image is clicked. 
+<P>The <CODE>pager</CODE> option is used for creating full navigation controls. 
+This option instructs the plugin to create navigation elements, one for each 
+slide, and add them to the container identified by the value of the pager 
+option. 
+<TABLE cellSpacing=20>
+  <TBODY>
+  <TR>
+    <TD>
+      <H1>Manual and Auto Advance</H1>
+      <DIV class=nav>(hover to pause, click to advance)</DIV>
+      <DIV class=pics id=s3><IMG height=200 
+      src="JQuery Cycle Plugin.files/beach1.jpg" width=200> <IMG height=200 
+      src="JQuery Cycle Plugin.files/beach2.jpg" width=200> <IMG height=200 
+      src="JQuery Cycle Plugin.files/beach3.jpg" width=200> </DIV><PRE><CODE class=mix>$('#s3').cycle({
+    fx:     'fade',
+    speed:   300,
+    timeout: 3000,
+    next:   '#s3',
+    pause:   1
+});</CODE></PRE></TD>
+    <TD>
+      <H1>Pager</H1>
+      <DIV class=pics id=s4><IMG height=200 
+      src="JQuery Cycle Plugin.files/beach1.jpg" width=200> <IMG height=200 
+      src="JQuery Cycle Plugin.files/beach2.jpg" width=200> <IMG height=200 
+      src="JQuery Cycle Plugin.files/beach3.jpg" width=200> <IMG height=200 
+      src="JQuery Cycle Plugin.files/beach4.jpg" width=200> <IMG height=200 
+      src="JQuery Cycle Plugin.files/beach5.jpg" width=200> <IMG height=200 
+      src="JQuery Cycle Plugin.files/beach6.jpg" width=200> <IMG height=200 
+      src="JQuery Cycle Plugin.files/beach7.jpg" width=200> <IMG height=200 
+      src="JQuery Cycle Plugin.files/beach8.jpg" width=200> </DIV><PRE><CODE class=mix id=skip2>$('#s4')
+.before('&lt;div id="nav"&gt;')
+.cycle({
+    fx:     'turnDown',
+    speed:  'fast',
+    timeout: 0,
+    pager:  '#nav'
+});</CODE></PRE></TD></TR></TBODY></TABLE>
+<P>When using the <CODE>pager</CODE> option, the generated navigation elements 
+are simply anchors. So if you set the pager option like so:<BR><CODE>pager: 
+'#nav'</CODE><BR>you can style the anchors like this:<BR><CODE>#nav a { 
+background-color: #fc0 }</CODE> 
+<P>In addition, the navigation element for the <EM>active</EM> slide is given 
+the class <CODE>activeSlide</CODE> so that it can be styled uniquely. </P>
+<P>The pager in the example above is styled like this:</P><PRE><CODE class=css>#nav a { border: 1px solid #ccc; background: #fc0; text-decoration: none; margin: 0 5px; padding: 3px 5px;  }
+#nav a.activeSlide { background: #ea0 }
+#nav a:focus { outline: none; }
+</CODE></PRE>
+<H1>Stopping a Slideshow</H1>
+<P>If you need to stop a running slideshow you can pass the string 'stop' to the 
+<CODE class=inline>cycle</CODE> method. <PRE><CODE class=mix>$('#slideshow').cycle('stop');</CODE></PRE>
+<P></P>
+<H1>Manually Pausing a Slideshow</H1>
+<P>If you need to pause/resume a running slideshow you can pass the string 
+'pause' or 'resume' to the <CODE class=inline>cycle</CODE> method. <PRE><CODE class=mix>$('#slideshow').cycle('pause');</CODE></PRE>
+<P></P>
+<H1>Callbacks</H1>
+<P>Before and after callbacks are supported for each slide transition. Within 
+the context of your callback method, <CODE>this</CODE> is the element that is 
+transitioning in. The <CODE>before</CODE> option specifies the name of the 
+callback function to be invoked immediately before a slide transition. The 
+<CODE>after</CODE> option specifies the name of the callback method to be 
+invoked at the end of a slide transition. </P>
+<P>The before and after callback methods are passed three arguments: 
+<OL>
+  <LI>the DOM element for the slide that is being transitioned 
+  <STRONG><EM>in</EM></STRONG> (same as <EM>this</EM>) 
+  <LI>the DOM element for the slide that is being transitioned 
+  <STRONG><EM>out</EM></STRONG> 
+  <LI>the options object </LI></OL>
+<P></P>
+<TABLE cellSpacing=20>
+  <TBODY>
+  <TR>
+    <TD>
+      <DIV class=pics id=s5><IMG height=200 alt="Panama City Beach, FL" 
+      src="JQuery Cycle Plugin.files/beach1.jpg" width=200> <IMG height=200 
+      alt="Three boys heading to the water" 
+      src="JQuery Cycle Plugin.files/beach2.jpg" width=200> <IMG height=200 
+      alt="Danny looking for sharks!" src="JQuery Cycle Plugin.files/beach3.jpg" 
+      width=200> </DIV><PRE><CODE class=mix>$('#s5').cycle({
+    fx:     'scrollLeft',
+    timeout: 5000,
+    before:  onBefore,
+    after:   onAfter
+ });</CODE></PRE></TD>
+    <TD>
+      <DIV id=output>Status area</DIV></TD></TR>
+  <TR>
+    <TD id=big colSpan=2>The callbacks for the example above are implemented 
+      as follows: <PRE><CODE class=mix id=skip>function onBefore() {
+    $('#output').html("Scrolling image:&lt;br&gt;" + this.src);
+}
+function onAfter() {
+    $('#output').html("Scroll complete for:&lt;br&gt;" + this.src)
+        .append('&lt;h3&gt;' + this.alt + '&lt;/h3&gt;');
+}</CODE></PRE></TD></TR></TBODY></TABLE>
+<H1>Non-Image Content</H1>
+<P>The examples thus far have all used image content. This was done for 
+simplicity and because images demo very well. But there is no restriction on 
+slide content. Your slides can contain whatever you wish. </P>
+<TABLE cellSpacing=20>
+  <TBODY>
+  <TR>
+    <TD>
+      <DIV id=s6>
+      <DIV><IMG height=200 src="JQuery Cycle Plugin.files/beach1.jpg" width=200> 
+
+      <P>St Andrews State Park - Panama City, FL</P>
+      <P>This park is one of the most popular outdoor recreation spots in 
+      Florida. </P></DIV>
+      <DIV><IMG height=200 src="JQuery Cycle Plugin.files/beach2.jpg" width=200> 
+
+      <P>Located in the Florida panhandle, the 1,260 acre park is situated on a 
+      scenic peninsula and is well known for its sugar white sands and brilliant 
+      blue water. </P></DIV>
+      <DIV><IMG height=200 src="JQuery Cycle Plugin.files/beach3.jpg" width=200> 
+
+      <P>The ocean provides opportunity for endless fun. From boogie boarding to 
+      snorkeling to swimming and boating, there is always something to 
+      do.</P></DIV></DIV><PRE><CODE class=mix>$('#s6').cycle({
+    fx:     'scrollUp',
+    timeout: 6000,
+    delay:  -2000
+});</CODE></PRE></TD>
+    <TD>
+      <DIV id=s7>
+      <DIV><STRONG>1</STRONG> There are tons of options you can use to control 
+      how and when your slide transitions occur. Test them out and see what ones 
+      you like. Check out the many examples on this website and see which ones 
+      catch your eye. </DIV>
+      <DIV><STRONG>2</STRONG> There are tons of options you can use to control 
+      how and when your slide transitions occur. Test them out and see what ones 
+      you like. Check out the many examples on this website and see which ones 
+      catch your eye. </DIV>
+      <DIV><STRONG>3</STRONG> There are tons of options you can use to control 
+      how and when your slide transitions occur. Test them out and see what ones 
+      you like. Check out the many examples on this website and see which ones 
+      catch your eye. </DIV></DIV><PRE><CODE class=mix>$('#s7').cycle({
+    fx:    'scrollRight',
+    delay: -1000
+});</CODE></PRE></TD></TR></TBODY></TABLE></DIV>
+<HR>
+Next up: <A href="http://www.malsup.com/jquery/cycle/adv.html">Advanced Demo 
+(Part 1) ››</A> </DIV>
+<DIV></DIV>
+<SCRIPT src="JQuery Cycle Plugin.files/urchin.js" type=text/javascript></SCRIPT>
+
+<SCRIPT type=text/javascript>
+_uacct = "UA-850242-2";
+urchinTracker();
+</SCRIPT>
+</BODY></HTML>

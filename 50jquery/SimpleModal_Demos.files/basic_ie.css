@@ -1,0 +1,6 @@
+#modalContainer {
+	
+}
+#modalContainer A.modalCloseImg {
+	RIGHT: -14px; BACKGROUND: none transparent scroll repeat 0% 0%; FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/basic/x.png',sizingMethod='scale'); WIDTH: 22px; HEIGHT: 26px
+}

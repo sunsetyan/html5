@@ -1,0 +1,63 @@
+ {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+BODY {
+	BACKGROUND: #666; FONT-FAMILY: Verdana, sans
+}
+H1 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 1.6em; PADDING-BOTTOM: 0.3em; MARGIN: 0px 0px 1em; PADDING-TOP: 0px; BORDER-BOTTOM: #ccc 4px solid
+}
+H1.home {
+	MARGIN: 0px; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+H2 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 1.2em; PADDING-BOTTOM: 0.3em; MARGIN: 1em 0px; PADDING-TOP: 0px; BORDER-BOTTOM: #ccc 2px solid
+}
+H3 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: normal; FONT-SIZE: 1.1em; PADDING-BOTTOM: 10px; PADDING-TOP: 0px; BORDER-BOTTOM: #ccc 2px solid
+}
+P {
+	MARGIN: 1em 0px
+}
+UL {
+	MARGIN: 0px 0px 0px 20px
+}
+DT {
+	FONT-WEIGHT: bold; MARGIN: 1em 0px 0.2em
+}
+DD {
+	MARGIN: 0.2em 0px 1em
+}
+#container {
+	PADDING-RIGHT: 20px; PADDING-LEFT: 20px; BACKGROUND: #fff; PADDING-BOTTOM: 10px; MARGIN: 0px auto; WIDTH: 758px; PADDING-TOP: 10px
+}
+FIELDSET {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 0px; MARGIN: 1em 0px; WIDTH: 180px; PADDING-TOP: 0px
+}
+LABEL {
+	DISPLAY: inline-block; VERTICAL-ALIGN: top; WIDTH: 160px; LINE-HEIGHT: 1.8
+}
+#chooseDateForm LI {
+	CLEAR: both; PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; LIST-STYLE-TYPE: none
+}
+SELECT {
+	WIDTH: 100px
+}
+INPUT {
+	MARGIN: 5px 0px; WIDTH: 170px
+}
+INPUT.dp-applied {
+	FLOAT: left; WIDTH: 140px
+}
+A.dp-choose-date {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 0px; BACKGROUND: url(calendar.png) no-repeat; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 5px 3px 0px; OVERFLOW: hidden; WIDTH: 16px; TEXT-INDENT: -2000px; PADDING-TOP: 0px; HEIGHT: 16px
+}
+A.dp-disabled {
+	BACKGROUND-POSITION: 0px -20px; CURSOR: default
+}
+#calendar-me {
+	MARGIN: 20px
+}
+PRE.sourcecode {
+	BORDER-RIGHT: #ccc 2px dashed; PADDING-RIGHT: 10px; BORDER-TOP: #ccc 2px dashed; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; MARGIN: 0px 0px 20px; OVERFLOW: auto; BORDER-LEFT: #ccc 2px dashed; WIDTH: 734px; PADDING-TOP: 10px; BORDER-BOTTOM: #ccc 2px dashed
+}

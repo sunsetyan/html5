@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>JQuery Collapse</title>
+<script type="text/javascript" src="jquery/jquery.js"></script>
+<script type="text/javascript">
+$(function()
+{
+
+$("#mostrar").click(function(event) {
+event.preventDefault();
+$("#caja").slideToggle();
+});
+
+$("#caja a").click(function(event) {
+event.preventDefault();
+$("#caja").slideUp();
+});
+});
+</script>
+<style type="text/css">
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #666666;	
+}
+a{color:#993300; text-decoration:none;}
+#caja {
+width:70%;
+display: none;
+padding:5px;
+border:2px solid #FADDA9;
+background-color:#FDF4E1;
+}
+#mostrar{
+display:block;
+width:70%;
+padding:5px;
+border:2px solid #D0E8F4;
+background-color:#ECF8FD;
+}
+</style>
+</head>
+<body>
+<a href="#" id="mostrar">MOSTRAR</a>
+
+<div id="caja">
+<a href="#" class="close">[x]</a>
+<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
+</div>
+</body>
+</html>

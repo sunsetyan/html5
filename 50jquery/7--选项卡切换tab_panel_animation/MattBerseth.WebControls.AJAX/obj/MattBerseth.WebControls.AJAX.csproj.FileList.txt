@@ -1,0 +1,8 @@
+bin\Debug\MattBerseth.WebControls.AJAX.dll
+bin\Debug\MattBerseth.WebControls.AJAX.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\MattBerseth.WebControls.AJAX.GridViewControl.GridViewControlBehavior.js
+obj\Debug\MattBerseth.WebControls.AJAX.NiftyCornersControl.NiftyCornersBehavior.js
+obj\Debug\MattBerseth.WebControls.AJAX.TabAnimationControl.TabAnimationBehavior.js
+obj\Debug\MattBerseth.WebControls.AJAX.dll
+obj\Debug\MattBerseth.WebControls.AJAX.pdb

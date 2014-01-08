@@ -1,0 +1,39 @@
+BODY {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; WIDTH: 100%; PADDING-TOP: 0px; HEIGHT: 100%
+}
+#confirmModalOverlay {
+	CURSOR: wait; BACKGROUND-COLOR: #eee
+}
+#confirmModalContainer {
+	BORDER-RIGHT: #336699 2px solid; BORDER-TOP: #336699 2px solid; FONT-SIZE: 16px; BACKGROUND: #fff; LEFT: 50%; MARGIN-LEFT: -210px; BORDER-LEFT: #336699 2px solid; WIDTH: 420px; BORDER-BOTTOM: #336699 2px solid; FONT-FAMILY: 'Trebuchet MS', Verdana, Arial; TOP: 15%; HEIGHT: 140px; TEXT-ALIGN: left
+}
+#confirmModalContainer .header {
+	FONT-WEIGHT: bold; FONT-SIZE: 1.1em; BACKGROUND: url(../img/confirm/header.gif) repeat-x; WIDTH: 100%; COLOR: #fff; LINE-HEIGHT: 30px; HEIGHT: 30px
+}
+#confirmModalContainer .header SPAN {
+	PADDING-LEFT: 8px
+}
+#confirmModalContainer .message {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; FONT-SIZE: 1em; PADDING-BOTTOM: 12px; MARGIN: 0px; COLOR: #333; PADDING-TOP: 12px; TEXT-ALIGN: center
+}
+#confirmModalContainer .buttons {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 8px; FLOAT: right; PADDING-BOTTOM: 0px; WIDTH: 160px; PADDING-TOP: 10px
+}
+#confirmModalContainer .buttons DIV {
+	BORDER-RIGHT: #bbb 1px solid; BORDER-TOP: #bbb 1px solid; FONT-WEIGHT: bold; BACKGROUND: url(../img/confirm/button.gif) repeat-x; FLOAT: right; MARGIN-LEFT: 8px; BORDER-LEFT: #bbb 1px solid; WIDTH: 70px; CURSOR: pointer; COLOR: #666; BORDER-BOTTOM: #bbb 1px solid; HEIGHT: 26px; TEXT-ALIGN: center
+}
+#confirmModalContainer A.modalCloseX {
+	FONT-WEIGHT: bold; FONT-SIZE: 1.1em; LEFT: 400px; COLOR: #ddd; POSITION: absolute; TOP: -1px; TEXT-DECORATION: none
+}
+#confirmModalContainer A.modalCloseX:link {
+	FONT-WEIGHT: bold; FONT-SIZE: 1.1em; LEFT: 400px; COLOR: #ddd; POSITION: absolute; TOP: -1px; TEXT-DECORATION: none
+}
+#confirmModalContainer A.modalCloseX:active {
+	FONT-WEIGHT: bold; FONT-SIZE: 1.1em; LEFT: 400px; COLOR: #ddd; POSITION: absolute; TOP: -1px; TEXT-DECORATION: none
+}
+#confirmModalContainer A.modalCloseX:visited {
+	FONT-WEIGHT: bold; FONT-SIZE: 1.1em; LEFT: 400px; COLOR: #ddd; POSITION: absolute; TOP: -1px; TEXT-DECORATION: none
+}
+#confirmModalContainer A.modalCloseX:hover {
+	COLOR: #9bb3b3
+}

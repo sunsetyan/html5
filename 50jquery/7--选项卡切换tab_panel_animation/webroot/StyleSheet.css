@@ -1,0 +1,60 @@
+body { font-family:verdana,tahoma,helvetica; }
+
+/* ajax__tab_jquery-theme theme */
+.ajax__tab_jquery-theme
+{
+	/* fonts for the tabs */
+	font-family:"Trebuchet MS",Trebuchet,Verdana,Helvetica,Arial,sans-serif;
+	font-size:12px;	
+}
+.ajax__tab_jquery-theme .ajax__tab_tab
+{
+	display:block;
+	padding:0pt 12px;	
+	color:#fff;	
+}
+.ajax__tab_jquery-theme .ajax__tab_body 
+{
+	background-color:#fff;
+	border:1px solid #519E2D; /* green border */
+	padding:10px;
+}
+
+/* regular header styles */
+.ajax__tab_jquery-theme .ajax__tab_header .ajax__tab_tab
+{
+	padding-top:1px;
+	height:20px;
+	line-height:20px;	
+	margin:0px; /* reset from original */	
+	margin-bottom:1px; /* the jquery tabs hover just a little bit */
+}
+.ajax__tab_jquery-theme .ajax__tab_header .ajax__tab_outer
+{
+	margin-left:3px;
+	background:transparent url(img/jquery/sprite.png) no-repeat right 0px;
+}
+.ajax__tab_jquery-theme .ajax__tab_header .ajax__tab_inner
+{
+	margin-right:3px;
+	background:transparent url(img/jquery/sprite.png) no-repeat left 0px;
+}
+
+/* active headers styles */
+.ajax__tab_jquery-theme .ajax__tab_active 
+{
+	height:23px;
+	line-height:23px;		
+}
+.ajax__tab_jquery-theme .ajax__tab_active .ajax__tab_outer
+{
+	margin-left:3px;
+	background:transparent url(img/jquery/sprite.png) no-repeat right -23px;
+}
+.ajax__tab_jquery-theme .ajax__tab_active .ajax__tab_inner
+{
+	margin-right:3px;
+	background:transparent url(img/jquery/sprite.png) no-repeat left -23px;
+}
+
+
